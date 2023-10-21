@@ -26,12 +26,15 @@ function App() {
     });
   };
 
+  const totalCount = Object.values(result).reduce((total, result) => total + result, 0);
+
   return (
     <div className='bg-brand'>
       <main className='mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-44 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8'>
         <Hero />
         <Blogs onRecordClick={recordClick} />
         <SlideOver open={open} onOpen={setOpen}>
+          <h3 className='text-white font-medium mb-3'>Total Count: {totalCount}</h3>
           <pre className='text-white inline-block'>
             {JSON.stringify(result, undefined, 2)}
           </pre>
@@ -41,7 +44,7 @@ function App() {
           className='fixed z-90 bottom-10 right-8 bg-red-600 px-4 py-2 rounded-md flex justify-center items-center text-white text-xl hover:bg-red-700'
           onClick={() => setOpen((prev) => !prev)}
         >
-          Result
+          Result ({String(totalCount)})
         </button>
       </main>
     </div>
