@@ -1,6 +1,10 @@
 import mainHeroImage from './assets/component-01/Image-01.jpg';
+import mainHeroImageLarge from './assets/component-01/Image-01@2x.jpg';
 import secondaryHeroImage1 from './assets/component-01/Image-02.jpg';
+import secondaryHeroImage1Large from './assets/component-01/Image-02@2x.jpg';
 import secondaryHeroImage2 from './assets/component-01/Image-03.jpg';
+import secondaryHeroImage2Large from './assets/component-01/Image-03@2x.jpg';
+import Preview from './components/Preview';
 
 import { posts } from './data';
 
@@ -19,23 +23,44 @@ function Hero() {
   return (
     <section className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
       <div className='aspect-h-4 aspect-w-3'>
-        <img
-          src={mainHeroImage}
-          alt='Walnut card tray with white powder coated steel divider and 3 punchout holes.'
-          className='h-full w-full object-cover object-center bg-gray-100'
-        />
+        <Preview>
+          <picture>
+            <source media='(max-width: 800px)' srcSet={mainHeroImageLarge} />
+            <img
+              src={mainHeroImage}
+              alt='Walnut card tray with white powder coated steel divider and 3 punchout holes.'
+              className='h-full w-full object-cover object-center bg-gray-100'
+            />
+          </picture>
+        </Preview>
       </div>
       <div className='grid grid-cols-1 gap-4 sm:gap-6'>
-        <img
-          src={secondaryHeroImage1}
-          alt='Top down view of walnut card tray with embedded magnets and card groove.'
-          className='h-full w-full object-cover bg-gray-100'
-        />
-        <img
-          src={secondaryHeroImage2}
-          alt='Side of walnut card tray with card groove and recessed card area.'
-          className='h-full w-full object-cover bg-gray-100'
-        />
+        <Preview>
+          <picture>
+            <source
+              media='(max-width: 800px)'
+              srcSet={secondaryHeroImage1Large}
+            />
+            <img
+              src={secondaryHeroImage1}
+              alt='Top down view of walnut card tray with embedded magnets and card groove.'
+              className='h-full w-full object-cover bg-gray-100'
+            />
+          </picture>
+        </Preview>
+        <Preview>
+          <picture>
+            <source
+              media='(max-width: 800px)'
+              srcSet={secondaryHeroImage2Large}
+            />
+            <img
+              src={secondaryHeroImage2}
+              alt='Side of walnut card tray with card groove and recessed card area.'
+              className='h-full w-full object-cover bg-gray-100'
+            />
+          </picture>
+        </Preview>
       </div>
 
       <div>
