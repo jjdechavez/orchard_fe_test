@@ -160,7 +160,7 @@ function Blogs({ onRecordClick }: BlogProps) {
             <div className='relative mt-8'>
               <div className='text-sm uppercase leading-6 border-b border-red-600'>
                 <p className='font-semibold text-white hover:text-gray-400'>
-                  <a href='#'>
+                  <a href='#' onClick={() => onRecordClick(post.title)}>
                     <span className='absolute inset-0' />
                     Read more
                   </a>
