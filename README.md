@@ -7,6 +7,9 @@ This repository contain Frontend Test for Orchard
 - TypeScript
 - TailwindCSS
 
+## Live version
+You can access the live version by visiting the following link: https://spectacular-starburst-50d807.netlify.app
+
 ## Installation
 - Clone the git repository by `git clone git@github.com:jjdechavez/orchard_fe_test.git`
 - Install the dependencies by `pnpm isntall` or `npm install`
