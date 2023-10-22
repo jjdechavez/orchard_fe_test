@@ -40,7 +40,7 @@ function App() {
           <h3 className='text-white font-medium mb-3'>
             Total Count: {totalCount}
           </h3>
-          <pre className='text-white inline-block'>
+          <pre className='text-white overflow-x-scroll'>
             {JSON.stringify(result, undefined, 2)}
           </pre>
         </SlideOver>
