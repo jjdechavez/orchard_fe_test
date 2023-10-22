@@ -26,7 +26,10 @@ function App() {
     });
   };
 
-  const totalCount = Object.values(result).reduce((total, result) => total + result, 0);
+  const totalCount = Object.values(result).reduce(
+    (total, result) => total + result,
+    0
+  );
 
   return (
     <div className='bg-brand'>
@@ -34,7 +37,9 @@ function App() {
         <Hero />
         <Blogs onRecordClick={recordClick} />
         <SlideOver open={open} onOpen={setOpen}>
-          <h3 className='text-white font-medium mb-3'>Total Count: {totalCount}</h3>
+          <h3 className='text-white font-medium mb-3'>
+            Total Count: {totalCount}
+          </h3>
           <pre className='text-white inline-block'>
             {JSON.stringify(result, undefined, 2)}
           </pre>
@@ -140,9 +145,9 @@ function Blogs({ onRecordClick }: BlogProps) {
         {posts.map((post) => (
           <article
             key={post.id}
-            className='flex max-w-xl flex-col items-start justify-between'
+            className='flex max-w-xl flex-col items-start justify-between group/image'
           >
-            <div className='w-full border-b-4 border-red-600'>
+            <div className='w-full border-transparent group-hover/image:border-b-4 group-hover/image:border-red-600 ease-in-out delay-150 duration-200'>
               <img
                 src={post.image.default}
                 alt={post.description}
@@ -150,7 +155,7 @@ function Blogs({ onRecordClick }: BlogProps) {
               />
             </div>
             <div className='group relative'>
-              <h3 className='mt-6 text-lg font-semibold leading-6 text-white group-hover:text-gray-400'>
+              <h3 className='mt-6 text-lg font-semibold leading-6 text-white hover:text-gray-400'>
                 <a href='#' onClick={() => onRecordClick(post.title)}>
                   <span className='absolute inset-0' />
                   {post.title}
@@ -161,7 +166,7 @@ function Blogs({ onRecordClick }: BlogProps) {
               </p>
             </div>
             <div className='relative mt-8'>
-              <div className='text-sm uppercase leading-6 border-b border-red-600'>
+              <div className='text-sm uppercase leading-6 border-transparent hover:border-b hover:border-red-600 delay-150 duration-200'>
                 <p className='font-semibold text-white hover:text-gray-400'>
                   <a href='#' onClick={() => onRecordClick(post.title)}>
                     <span className='absolute inset-0' />
