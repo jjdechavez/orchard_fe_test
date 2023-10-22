@@ -65,8 +65,8 @@ function Hero() {
             <source media='(max-width: 800px)' srcSet={mainHeroImageLarge} />
             <img
               src={mainHeroImage}
-              alt='Walnut card tray with white powder coated steel divider and 3 punchout holes.'
-              className='h-full w-full object-cover object-center bg-gray-100'
+              alt='Main Hero Image 1'
+              className='h-full w-full object-cover'
             />
           </picture>
         </Preview>
@@ -80,8 +80,8 @@ function Hero() {
             />
             <img
               src={secondaryHeroImage1}
-              alt='Top down view of walnut card tray with embedded magnets and card groove.'
-              className='h-full w-full object-cover bg-gray-100'
+              alt='Secondary Hero Image 1'
+              className='h-full w-full object-cover'
             />
           </picture>
         </Preview>
@@ -93,8 +93,8 @@ function Hero() {
             />
             <img
               src={secondaryHeroImage2}
-              alt='Side of walnut card tray with card groove and recessed card area.'
-              className='h-full w-full object-cover bg-gray-100'
+              alt='Secondary Hero Image 2'
+              className='h-full w-full object-cover'
             />
           </picture>
         </Preview>
